@@ -1,144 +1,95 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    background: radial-gradient(circle at top, #0f172a, #020617);
-    color: white;
-    overflow-x: hidden;
-}
-
-/* GLASS EFFECT */
-.glass {
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
+  margin: 0;
+  font-family: sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
 }
 
 /* NAVBAR */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 20px;
-    animation: slideDown 1s ease;
-}
-
-header h1 {
-    color: #38bdf8;
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 15px 30px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: #38bdf8;
-    transform: scale(1.1);
+  color: #00ffcc;
 }
 
-/* HOME */
-.home {
-    text-align: center;
-    padding: 120px 20px;
-    margin: 20px;
-    animation: fadeIn 1.5s ease;
-}
-
-.home h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.home p {
-    opacity: 0.7;
-}
-
-.home button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background: #38bdf8;
-    color: black;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.home button:hover {
-    transform: scale(1.1);
-}
-
-/* SECTIONS */
-section {
-    padding: 60px 20px;
-    text-align: center;
-    margin: 20px;
-    animation: fadeUp 1s ease;
-}
-
-/* PROJECTS */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
+/* CARD */
 .card {
-    width: 220px;
-    padding: 20px;
-    transition: 0.4s;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 40px rgba(0,255,200,0.2);
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* HERO */
+.hero {
+  text-align: center;
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* AVATAR */
+.avatar {
+  width: 150px;
+  border-radius: 50%;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* SKILL BAR */
+.bar {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 10px;
+  background: linear-gradient(45deg,#00ffcc,#00aaff);
+}
+
+/* INPUT */
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(45deg,#00ffcc,#00aaff);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
 }
